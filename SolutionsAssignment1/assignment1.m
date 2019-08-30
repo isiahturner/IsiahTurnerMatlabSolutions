@@ -22,7 +22,7 @@
 
 % 1. Set the url of the matlab documentation to a variable called helpURL
 
-helpURL = web ('https://www.mathworks.com/help/matlab/');
+helpURL = web ('https://www.mathworks.com/help/matlab/')
 
 % 2. What does the command 'clear all' do?
 %
