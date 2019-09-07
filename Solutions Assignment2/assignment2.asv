@@ -95,18 +95,17 @@ clear, close all
 % 1.1000 1.3000 1.5000 1.7000 
 % 8 6 4 2
 % Store your results with variable names vecA, vecB and vecC respectively.
-    vecA= (2:7)
-    vecB= (1.1:0.2:1.7)
+    vecA= [2:7]
+    vecB= [1.1:0.2:1.7]
     vecC= flip(2:2:8)
 
 % 11. Give the MATLAB expression that would create a vector 
 % (in a variable called vec) of 50 elements that range, equally spaced, 
 % from 0 to 2pi:
-    vec= linspace(0,2*pi,50);
+    vec= 
 
 % 12. Using the colon operator and the transpose operator, 
 % create a column vector that has the values -1 to 1 in steps of 0.5.
-    vecD= (-1:0.5:1)'
 
 
 % 13. Create a variable called rows that is a random integer in the inclusive range 
