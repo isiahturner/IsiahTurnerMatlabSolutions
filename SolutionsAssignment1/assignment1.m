@@ -137,10 +137,10 @@ S = nansum(A)
 
 %Input to Output code ('s' makes it so the text is run as a text but not an
 %expression
-    prompt= 'Insert Desired Text'
-    sayWhatever= input('Prompt','s')
+    prompt= 'Insert Desired Text:  ';
+    sayWhatever= input(prompt,'s');
 
-
+    disp(sayWhatever)
 
 %%%%% When you have completed everything, type the following two commands
 %%%%% (without comments) into your command window. 
