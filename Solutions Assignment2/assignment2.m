@@ -204,7 +204,7 @@ clear, close all
     
     %Calulate unit vector, unit vector for x is first, y is second and z is
     %third
-    unitVector= inputVector/mag
+    unitVector= (inputVector/mag)
     
     
 
@@ -262,7 +262,7 @@ clear, close all
 % don't completely understand, just use your best guess after looking at a bit 
 % documentation. Use the following format:
 
-% line 252: loads the lattitude and longtitudes of the hurricane as it was
+% line 252: loads the lattitude, longtitudes, wind pressure, IDs of the information for the hurricane as it was
 % moving over time
 % line 253: it takes the top 8 rows and columns from a table, tall array
 % and timetable
