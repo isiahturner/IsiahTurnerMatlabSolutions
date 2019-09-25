@@ -11,6 +11,7 @@ clc
 clear
 %Set variables
 usedMoves=[];
+
 % Welcome message and prompt
 disp('Welcome to the best Tic-Tac-Toe game of your life doooooooood!');%make it so they lose if they don't put in correct term%
 disp('When picking a spot, 1=Top Left,2= Top Middle,3= Top Right,4= Left Middle,5= Middle,6= Right Middle,7= Bottom Left,8= Bottom Middle,9= Bottom Right')
@@ -35,7 +36,9 @@ end
 
 %PlayerMove 1
 playerMove= input('Pick a spot 1-9: ');
-%add a way to make sure they can't pick a number that isn't 1-9
+%add a way to make sure they can't pick a number that isn't 1-9 can't be
+%picked, make sure the number is turned into an integer
+
 %save the move
 usedMoves=[usedMoves,playerMove];
 
@@ -131,8 +134,7 @@ usedMoves= [usedMoves,playerMove];
     end
 
 
-%Computer's second move (based on if player doesn't pick center first,
-%based on if player does pick center first)
+%Computer's second move
 if gameBoard{1,1} == 'X' & gameBoard{1,2} == 'X' & gameBoard{1,3}== 3
     gameBoard{1,3}= 'O';
     disp(gameBoard)
@@ -181,45 +183,91 @@ elseif gameBoard{1,3} == 'X' & gameBoard{3,3} == 'X' & gameBoard{2,3}== 6
     gameBoard{2,3}= 'O';
     disp(gameBoard)
     usedMoves=[usedMoves,6];
+elseif gameBoard{2,2} == 'X' & gameBoard{1,1} == 'X' & gameBoard{3,3}== 9
+    gameBoard{3,3}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,9];
+elseif gameBoard{2,2} == 'X' & gameBoard{1,2} == 'X' & gameBoard{3,2}== 8
+    gameBoard{3,2}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,8];
+elseif gameBoard{2,2} == 'X' & gameBoard{2,1} == 'X' & gameBoard{2,3}== 6
+    gameBoard{2,3}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,6];
+elseif gameBoard{2,2} == 'X' & gameBoard{3,1} == 'X' & gameBoard{1,3}== 1
+    gameBoard{1,3}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,1];
+elseif gameBoard{2,2} == 'X' & gameBoard{3,2} == 'X' & gameBoard{1,2}== 2
+    gameBoard{1,2}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,2];
+elseif gameBoard{2,2} == 'X' & gameBoard{3,3} == 'X' & gameBoard{1,1}== 1
+    gameBoard{1,1}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,1];
+elseif gameBoard{2,2} == 'X' & gameBoard{2,3} == 'X' & gameBoard{2,1}== 4
+    gameBoard{2,1}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,4];
 else
-    %COMPUTER GAMEPLAN FOR IF THE PLAYER TAKES THE MIDDLE FOR THEIR FIRST MOVE
-    if gameBoard{2,2} == 'X' & gameBoard{1,1} == 'X' & gameBoard{3,3}== 9
-        gameBoard{3,3}= 'O';
-        disp(gameBoard)
-        usedMoves=[usedMoves,9];
-    elseif gameBoard{2,2} == 'X' & gameBoard{1,2} == 'X' & gameBoard{3,2}== 8
-        gameBoard{3,2}= 'O';
-        disp(gameBoard)
-        usedMoves=[usedMoves,8];
-    elseif gameBoard{2,2} == 'X' & gameBoard{2,1} == 'X' & gameBoard{2,3}== 6
+     %Computer's second move if it can't win or block opponent
+    if gameBoard{1,1} == 1 & gameBoard{2,2} == 'X'
+    gameBoard{1,1}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,1];
+    elseif gameBoard{1,3} == 3 & gameBoard{2,2} == 'X'
+    gameBoard{1,3}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,3];
+    elseif gameBoard{3,1} == 7 & gameBoard{2,2} == 'X'
+    gameBoard{3,1}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,7];
+    elseif gameBoard{3,3} == 9 & gameBoard{2,2} == 'X'
+    gameBoard{3,3}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,9];
+    %When player didn't take middle first
+    elseif gameBoard{1,2}=='X' & gameBoard{3,1}=='X' & gameBoard{2,3}== 6
         gameBoard{2,3}= 'O';
         disp(gameBoard)
-        usedMoves=[usedMoves,6];
-    elseif gameBoard{2,2} == 'X' & gameBoard{3,1} == 'X' & gameBoard{1,1}== 1
-        gameBoard{1,1}= 'O';
-        disp(gameBoard)
-        usedMoves=[usedMoves,1];
-    elseif gameBoard{2,2} == 'X' & gameBoard{3,2} == 'X' & gameBoard{1,2}== 2
-        gameBoard{1,2}= 'O';
-        disp(gameBoard)
-        usedMoves=[usedMoves,2];
-    elseif gameBoard{2,2} == 'X' & gameBoard{3,3} == 'X' & gameBoard{1,1}== 1
-        gameBoard{1,1}= 'O';
-        disp(gameBoard)
-        usedMoves=[usedMoves,1];
-    elseif gameBoard{2,2} == 'X' & gameBoard{2,3} == 'X' & gameBoard{2,1}== 4
+        usedMoves= [usedMoves,6];
+    elseif gameBoard{1,2}=='X' & gameBoard{3,3}=='X' & gameBoard{2,1}== 4
         gameBoard{2,1}= 'O';
         disp(gameBoard)
-        usedMoves=[usedMoves,4];
+        usedMoves= [usedMoves,4];
+    elseif gameBoard{3,2}=='X' & gameBoard{1,1}=='X' & gameBoard{2,3}== 6
+        gameBoard{2,3}= 'O';
+        disp(gameBoard)
+        usedMoves= [usedMoves,6];
+    elseif gameBoard{3,2}=='X' & gameBoard{1,3}=='X' & gameBoard{2,1}== 4
+        gameBoard{2,1}= 'O';
+        disp(gameBoard)
+        usedMoves= [usedMoves,4];
+    elseif gameBoard{2,1}=='X' & gameBoard{1,2}=='X' & gameBoard{1,1}== 1
+        gameBoard{1,1}= 'O'
+        disp(gameBoard)
+        usedMoves= [usedMoves,1];
+    elseif gameBoard{2,3}=='X' & gameBoard{3,2}=='X' & gameBoard{1,3}== 3
+        gameBoard{1,3}= 'O'
+        disp(gameBoard)
+       usedMoves= [usedMoves,3];
+    elseif gameBoard{2,3}=='X' & gameBoard{1,2}=='X' & gameBoard{1,1}== 1
+        gameBoard{1,1}= 'O'
+        disp(gameBoard)
+        usedMoves= [usedMoves,1];
     else
         if gameBoard{3,2}== 8
+        gameBoard{3,2}= 'O';
         disp(gameBoard)
         usedMoves= [usedMoves,8];
         else
-            gameBoard{3,3}= 'O';
+            gameBoard{1,1}= 'O';
             disp(gameBoard)
-            usedMoves= [usedMoves,9];
-        end    
+            usedMoves= [usedMoves,1];
+        end
     end
 end
 
@@ -380,8 +428,13 @@ elseif gameBoard{2,2} == 'O' & gameBoard{2,1} == 'O' & gameBoard{2,3}== 6
     disp(gameBoard)
     disp('Computer Wins!')
     return
-elseif gameBoard{2,2} == 'O' & gameBoard{3,1} == 'O' & gameBoard{1,1}== 1
-    gameBoard{1,1}= 'O';
+elseif gameBoard{2,2} == 'O' & gameBoard{3,1} == 'O' & gameBoard{1,3}== 3
+    gameBoard{1,3}= 'O';
+    disp(gameBoard)
+    disp('Computer Wins!')
+    return
+elseif gameBoard{2,2} == 'O' & gameBoard{1,3} == 'O' & gameBoard{3,1}== 7
+    gameBoard{3,1}= 'O';
     disp(gameBoard)
     disp('Computer Wins!')
     return
@@ -452,36 +505,72 @@ elseif gameBoard{1,3} == 'X' & gameBoard{3,3} == 'X' & gameBoard{2,3}== 6
     gameBoard{2,3}= 'O';
     disp(gameBoard)
     usedMoves=[usedMoves,6];
+elseif gameBoard{2,2} == 'X' & gameBoard{1,1} == 'X' & gameBoard{3,3}== 9
+    gameBoard{3,3}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,9];
+elseif gameBoard{2,2} == 'X' & gameBoard{1,2} == 'X' & gameBoard{3,2}== 8
+    gameBoard{3,2}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,8];
+elseif gameBoard{2,2} == 'X' & gameBoard{2,1} == 'X' & gameBoard{2,3}== 6
+    gameBoard{2,3}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,6];
+elseif gameBoard{2,2} == 'X' & gameBoard{3,1} == 'X' & gameBoard{1,3}== 1
+    gameBoard{1,3}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,1];
+elseif gameBoard{2,2} == 'X' & gameBoard{3,2} == 'X' & gameBoard{1,2}== 2
+    gameBoard{1,2}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,2];
+elseif gameBoard{2,2} == 'X' & gameBoard{3,3} == 'X' & gameBoard{1,1}== 1
+    gameBoard{1,1}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,1];
+elseif gameBoard{2,2} == 'X' & gameBoard{2,3} == 'X' & gameBoard{2,1}== 4
+    gameBoard{2,1}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,4];
 else
-    %COMPUTER GAMEPLAN FOR IF THE PLAYER TAKES THE MIDDLE FOR THEIR FIRST MOVE
-    if gameBoard{2,2} == 'X' & gameBoard{1,1} == 'X' & gameBoard{3,3}== 9
-        gameBoard{3,3}= 'O';
-        disp(gameBoard)
-        usedMoves=[usedMoves,9];
-    elseif gameBoard{2,2} == 'X' & gameBoard{1,2} == 'X' & gameBoard{3,2}== 8
-        gameBoard{3,2}= 'O';
-        disp(gameBoard)
-        usedMoves=[usedMoves,8];
-    elseif gameBoard{2,2} == 'X' & gameBoard{2,1} == 'X' & gameBoard{2,3}== 6
-        gameBoard{2,3}= 'O';
-        disp(gameBoard)
-        usedMoves=[usedMoves,6];
-    elseif gameBoard{2,2} == 'X' & gameBoard{3,1} == 'X' & gameBoard{1,1}== 1
-        gameBoard{1,1}= 'O';
-        disp(gameBoard)
-        usedMoves=[usedMoves,1];
-    elseif gameBoard{2,2} == 'X' & gameBoard{3,2} == 'X' & gameBoard{1,2}== 2
-        gameBoard{1,2}= 'O';
-        disp(gameBoard)
-        usedMoves=[usedMoves,2];
-    elseif gameBoard{2,2} == 'X' & gameBoard{3,3} == 'X' & gameBoard{1,1}== 1
-        gameBoard{1,1}= 'O';
-        disp(gameBoard)
-        usedMoves=[usedMoves,1];
-    elseif gameBoard{2,2} == 'X' & gameBoard{2,3} == 'X' & gameBoard{2,1}== 4
-        gameBoard{2,1}= 'O';
-        disp(gameBoard)
-        usedMoves=[usedMoves,4];
+     %Computer's second move if it can't win or block opponent
+    if gameBoard{1,1} ~= 'X' & gameBoard{1,1} ~= 'O'
+    gameBoard{1,1}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,1];
+    elseif gameBoard{1,3} ~= 'X' & gameBoard{1,3} ~= 'O'
+    gameBoard{1,3}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,3];
+    elseif gameBoard{3,1} ~= 'X' & gameBoard{3,1} ~= 'O'
+    gameBoard{3,1}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,7];
+    elseif gameBoard{3,3} ~= 'X' & gameBoard{3,3} ~= 'O'
+    gameBoard{3,3}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,9];
+    elseif gameBoard{2,2} ~= 'X' & gameBoard{2,2} ~= 'O'
+    gameBoard{2,2}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,5];
+    elseif gameBoard{2,3} ~= 'X' & gameBoard{2,3} ~= 'O'
+    gameBoard{2,3}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,6];
+    elseif gameBoard{1,2} ~= 'X' & gameBoard{1,2} ~= 'O'
+    gameBoard{1,2}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,2];
+    elseif gameBoard{3,2} ~= 'X' & gameBoard{3,2} ~= 'O'
+    gameBoard{3,2}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,8];
+    elseif gameBoard{2,1} ~= 'X' & gameBoard{2,1} ~= 'O'
+    gameBoard{2,1}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,4];
     end
 end
 
@@ -640,8 +729,13 @@ elseif gameBoard{2,2} == 'O' & gameBoard{2,1} == 'O' & gameBoard{2,3}== 6
     disp(gameBoard)
     disp('Computer Wins!')
     return
-elseif gameBoard{2,2} == 'O' & gameBoard{3,1} == 'O' & gameBoard{1,1}== 1
-    gameBoard{1,1}= 'O';
+elseif gameBoard{2,2} == 'O' & gameBoard{3,1} == 'O' & gameBoard{1,3}== 3
+    gameBoard{1,3}= 'O';
+    disp(gameBoard)
+    disp('Computer Wins!')
+    return
+elseif gameBoard{2,2} == 'O' & gameBoard{1,3} == 'O' & gameBoard{3,1}== 7
+    gameBoard{3,1}= 'O';
     disp(gameBoard)
     disp('Computer Wins!')
     return
@@ -662,7 +756,7 @@ elseif gameBoard{2,2} == 'O' & gameBoard{2,3} == 'O' & gameBoard{2,1}== 4
     return
 end
 
-%computer's fourth move if it can't win
+%Computer's fourth move if it can't win
 if gameBoard{1,1} == 'X' & gameBoard{1,2} == 'X' & gameBoard{1,3}== 3
     gameBoard{1,3}= 'O';
     disp(gameBoard)
@@ -711,38 +805,74 @@ elseif gameBoard{1,3} == 'X' & gameBoard{3,3} == 'X' & gameBoard{2,3}== 6
     gameBoard{2,3}= 'O';
     disp(gameBoard)
     usedMoves=[usedMoves,6];
+elseif gameBoard{2,2} == 'X' & gameBoard{1,1} == 'X' & gameBoard{3,3}== 9
+    gameBoard{3,3}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,9];
+elseif gameBoard{2,2} == 'X' & gameBoard{1,2} == 'X' & gameBoard{3,2}== 8
+    gameBoard{3,2}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,8];
+elseif gameBoard{2,2} == 'X' & gameBoard{2,1} == 'X' & gameBoard{2,3}== 6
+    gameBoard{2,3}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,6];
+elseif gameBoard{2,2} == 'X' & gameBoard{3,1} == 'X' & gameBoard{1,3}== 1
+    gameBoard{1,3}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,1];
+elseif gameBoard{2,2} == 'X' & gameBoard{3,2} == 'X' & gameBoard{1,2}== 2
+    gameBoard{1,2}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,2];
+elseif gameBoard{2,2} == 'X' & gameBoard{3,3} == 'X' & gameBoard{1,1}== 1
+    gameBoard{1,1}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,1];
+elseif gameBoard{2,2} == 'X' & gameBoard{2,3} == 'X' & gameBoard{2,1}== 4
+    gameBoard{2,1}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,4];
 else
-    %COMPUTER GAMEPLAN FOR IF THE PLAYER TAKES THE MIDDLE FOR THEIR FIRST MOVE
-    if gameBoard{2,2} == 'X' & gameBoard{1,1} == 'X' & gameBoard{3,3}== 9
-        gameBoard{3,3}= 'O';
-        disp(gameBoard)
-        usedMoves=[usedMoves,9];
-    elseif gameBoard{2,2} == 'X' & gameBoard{1,2} == 'X' & gameBoard{3,2}== 8
-        gameBoard{3,2}= 'O';
-        disp(gameBoard)
-        usedMoves=[usedMoves,8];
-    elseif gameBoard{2,2} == 'X' & gameBoard{2,1} == 'X' & gameBoard{2,3}== 6
-        gameBoard{2,3}= 'O';
-        disp(gameBoard)
-        usedMoves=[usedMoves,6];
-    elseif gameBoard{2,2} == 'X' & gameBoard{3,1} == 'X' & gameBoard{1,1}== 1
-        gameBoard{1,1}= 'O';
-        disp(gameBoard)
-        usedMoves=[usedMoves,1];
-    elseif gameBoard{2,2} == 'X' & gameBoard{3,2} == 'X' & gameBoard{1,2}== 2
-        gameBoard{1,2}= 'O';
-        disp(gameBoard)
-        usedMoves=[usedMoves,2];
-    elseif gameBoard{2,2} == 'X' & gameBoard{3,3} == 'X' & gameBoard{1,1}== 1
-        gameBoard{1,1}= 'O';
-        disp(gameBoard)
-        usedMoves=[usedMoves,1];
-    elseif gameBoard{2,2} == 'X' & gameBoard{2,3} == 'X' & gameBoard{2,1}== 4
-        gameBoard{2,1}= 'O';
-        disp(gameBoard)
-        usedMoves=[usedMoves,4];
+     %Computer's second move if it can't win or block opponent
+    if gameBoard{1,1} ~= 'X' & gameBoard{1,1} ~= 'O'
+    gameBoard{1,1}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,1];
+    elseif gameBoard{1,3} ~= 'X' & gameBoard{1,3} ~= 'O'
+    gameBoard{1,3}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,3];
+    elseif gameBoard{3,1} ~= 'X' & gameBoard{3,1} ~= 'O'
+    gameBoard{3,1}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,7];
+    elseif gameBoard{3,3} ~= 'X' & gameBoard{3,3} ~= 'O'
+    gameBoard{3,3}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,9];
+    elseif gameBoard{2,2} ~= 'X' & gameBoard{2,2} ~= 'O'
+    gameBoard{2,2}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,5];
+    elseif gameBoard{2,3} ~= 'X' & gameBoard{2,3} ~= 'O'
+    gameBoard{2,3}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,6];
+    elseif gameBoard{1,2} ~= 'X' & gameBoard{1,2} ~= 'O'
+    gameBoard{1,2}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,2];
+    elseif gameBoard{3,2} ~= 'X' & gameBoard{3,2} ~= 'O'
+    gameBoard{3,2}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,8];
+    elseif gameBoard{2,1} ~= 'X' & gameBoard{2,1} ~= 'O'
+    gameBoard{2,1}= 'O';
+    disp(gameBoard)
+    usedMoves=[usedMoves,4];
     end
-end%%ADD A MOVE FOR WHEN THERE IS NO DECISIVE PLAY
+end
 
 %Player's final move
 playerMove= input('Pick a spot 1-9: ');
