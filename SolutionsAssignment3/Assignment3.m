@@ -368,18 +368,23 @@ elseif gameBoard{1,1} == 'O' & gameBoard{1,3} == 'O' & gameBoard{1,2}== 2
     disp(gameBoard)
     disp('Computer Wins!')
     return
-elseif gameBoard{1,1} == 'O' & gameBoard{2,1} == 'O' & gameBoard{3,1}== 7
-    gameBoard{3,1}= 'O';
+elseif gameBoard{2,1} == 'O' & gameBoard{2,2} == 'O' & gameBoard{2,3}== 6
+    gameBoard{2,3}= 'O';
     disp(gameBoard)
     disp('Computer Wins!')
     return
-elseif gameBoard{2,1} == 'O' & gameBoard{3,1} == 'O' & gameBoard{1,1}== 1
-    gameBoard{1,1}= 'O';
-    ddisp(gameBoard)
+elseif gameBoard{2,1} == 'O' & gameBoard{2,3} == 'O' & gameBoard{2,2}== 5
+    gameBoard{2,2}= 'O';
+    disp(gameBoard)
     disp('Computer Wins!')
     return
-elseif gameBoard{1,1} == 'O' & gameBoard{3,1} == 'O' & gameBoard{2,1}== 4
+elseif gameBoard{2,2} == 'O' & gameBoard{2,3} == 'O' & gameBoard{2,1}== 4
     gameBoard{2,1}= 'O';
+    disp(gameBoard)
+    disp('Computer Wins!')
+    return
+elseif gameBoard{3,1} == 'O' & gameBoard{3,3} == 'O' & gameBoard{3,2}== 8
+    gameBoard{3,2}= 'O';
     disp(gameBoard)
     disp('Computer Wins!')
     return
@@ -388,13 +393,43 @@ elseif gameBoard{3,1} == 'O' & gameBoard{3,2} == 'O' & gameBoard{3,3}== 9
     disp(gameBoard)
     disp('Computer Wins!')
     return
-elseif gameBoard{3,2} == 'O' & gameBoard{3,3} == 'O' & gameBoard{3,1}== 7
+elseif gameBoard{3,2} == 'O' & gameBoard{3,3} == 'O'& gameBoard{3,1}== 7
     gameBoard{3,1}= 'O';
     disp(gameBoard)
     disp('Computer Wins!')
     return
-elseif gameBoard{3,1} == 'O' & gameBoard{3,3} == 'O'& gameBoard{3,2}== 8
+elseif gameBoard{1,1} == 'O' & gameBoard{3,1} == 'O' & gameBoard{2,1}== 4
+    gameBoard{2,1}= 'O';
+    disp(gameBoard)
+    disp('Computer Wins!')
+    return
+elseif gameBoard{1,1} == 'O' & gameBoard{2,1} == 'O' & gameBoard{3,1}== 7
+    gameBoard{3,1}= 'O';
+    disp(gameBoard)
+    disp('Computer Wins!')
+    return
+elseif gameBoard{2,1} == 'O' & gameBoard{3,1} == 'O' & gameBoard{1,1}== 1
+    gameBoard{1,1}= 'O';
+    disp(gameBoard)
+    disp('Computer Wins!')
+    return
+elseif gameBoard{1,2} == 'O' & gameBoard{3,2} == 'O' & gameBoard{2,2}== 5
+    gameBoard{2,2}= 'O';
+    disp(gameBoard)
+    disp('Computer Wins!')
+    return
+elseif gameBoard{1,2} == 'O' & gameBoard{2,2} == 'O' & gameBoard{3,2}== 8
     gameBoard{3,2}= 'O';
+    disp(gameBoard)
+    disp('Computer Wins!')
+    return
+elseif gameBoard{2,2} == 'O' & gameBoard{3,2} == 'O' & gameBoard{1,2}== 2
+    gameBoard{1,2}= 'O';
+    disp(gameBoard)
+    disp('Computer Wins!')
+    return
+elseif gameBoard{1,3} == 'O' & gameBoard{3,3} == 'O' & gameBoard{2,3}== 6
+    gameBoard{2,3}= 'O';
     disp(gameBoard)
     disp('Computer Wins!')
     return
@@ -408,38 +443,13 @@ elseif gameBoard{2,3} == 'O' & gameBoard{3,3} == 'O' & gameBoard{1,3}== 3
     disp(gameBoard)
     disp('Computer Wins!')
     return
-elseif gameBoard{1,3} == 'O' & gameBoard{3,3} == 'O' & gameBoard{2,3}== 6
-    gameBoard{2,3}= 'O';
+elseif gameBoard{1,1} == 'O' & gameBoard{3,3} == 'O' & gameBoard{2,2}== 5
+    gameBoard{2,2}= 'O';
     disp(gameBoard)
     disp('Computer Wins!')
     return
-elseif gameBoard{2,2} == 'O' & gameBoard{1,1} == 'O' & gameBoard{3,3}== 9
+elseif gameBoard{1,1} == 'O' & gameBoard{2,2} == 'O' & gameBoard{3,3}== 9
     gameBoard{3,3}= 'O';
-    disp(gameBoard)
-    disp('Computer Wins!')
-    return
-elseif gameBoard{2,2} == 'O' & gameBoard{1,2} == 'O' & gameBoard{3,2}== 8
-    gameBoard{3,2}= 'O';
-    disp(gameBoard)
-    disp('Computer Wins!')
-    return
-elseif gameBoard{2,2} == 'O' & gameBoard{2,1} == 'O' & gameBoard{2,3}== 6
-    gameBoard{2,3}= 'O';
-    disp(gameBoard)
-    disp('Computer Wins!')
-    return
-elseif gameBoard{2,2} == 'O' & gameBoard{3,1} == 'O' & gameBoard{1,3}== 3
-    gameBoard{1,3}= 'O';
-    disp(gameBoard)
-    disp('Computer Wins!')
-    return
-elseif gameBoard{2,2} == 'O' & gameBoard{1,3} == 'O' & gameBoard{3,1}== 7
-    gameBoard{3,1}= 'O';
-    disp(gameBoard)
-    disp('Computer Wins!')
-    return
-elseif gameBoard{2,2} == 'O' & gameBoard{3,2} == 'O' & gameBoard{1,2}== 2
-    gameBoard{1,2}= 'O';
     disp(gameBoard)
     disp('Computer Wins!')
     return
@@ -448,8 +458,18 @@ elseif gameBoard{2,2} == 'O' & gameBoard{3,3} == 'O' & gameBoard{1,1}== 1
     disp(gameBoard)
     disp('Computer Wins!')
     return
-elseif gameBoard{2,2} == 'O' & gameBoard{2,3} == 'O' & gameBoard{2,1}== 4
-    gameBoard{2,1}= 'O';
+elseif gameBoard{3,1} == 'O' & gameBoard{1,3} == 'O' & gameBoard{2,2}== 5
+    gameBoard{2,2}= 'O';
+    disp(gameBoard)
+    disp('Computer Wins!')
+    return
+elseif gameBoard{2,2} == 'O' & gameBoard{1,3} == 'O' & gameBoard{3,1}== 7
+    gameBoard{3,1}= 'O';
+    disp(gameBoard)
+    disp('Computer Wins!')
+    return
+elseif gameBoard{3,1} == 'O' & gameBoard{2,2} == 'O' & gameBoard{1,3}== 3
+    gameBoard{1,3}= 'O';
     disp(gameBoard)
     disp('Computer Wins!')
     return
@@ -669,18 +689,23 @@ elseif gameBoard{1,1} == 'O' & gameBoard{1,3} == 'O' & gameBoard{1,2}== 2
     disp(gameBoard)
     disp('Computer Wins!')
     return
-elseif gameBoard{1,1} == 'O' & gameBoard{2,1} == 'O' & gameBoard{3,1}== 7
-    gameBoard{3,1}= 'O';
+elseif gameBoard{2,1} == 'O' & gameBoard{2,2} == 'O' & gameBoard{2,3}== 6
+    gameBoard{2,3}= 'O';
     disp(gameBoard)
     disp('Computer Wins!')
     return
-elseif gameBoard{2,1} == 'O' & gameBoard{3,1} == 'O' & gameBoard{1,1}== 1
-    gameBoard{1,1}= 'O';
-    ddisp(gameBoard)
+elseif gameBoard{2,1} == 'O' & gameBoard{2,3} == 'O' & gameBoard{2,2}== 5
+    gameBoard{2,2}= 'O';
+    disp(gameBoard)
     disp('Computer Wins!')
     return
-elseif gameBoard{1,1} == 'O' & gameBoard{3,1} == 'O' & gameBoard{2,1}== 4
+elseif gameBoard{2,2} == 'O' & gameBoard{2,3} == 'O' & gameBoard{2,1}== 4
     gameBoard{2,1}= 'O';
+    disp(gameBoard)
+    disp('Computer Wins!')
+    return
+elseif gameBoard{3,1} == 'O' & gameBoard{3,3} == 'O' & gameBoard{3,2}== 8
+    gameBoard{3,2}= 'O';
     disp(gameBoard)
     disp('Computer Wins!')
     return
@@ -689,13 +714,43 @@ elseif gameBoard{3,1} == 'O' & gameBoard{3,2} == 'O' & gameBoard{3,3}== 9
     disp(gameBoard)
     disp('Computer Wins!')
     return
-elseif gameBoard{3,2} == 'O' & gameBoard{3,3} == 'O' & gameBoard{3,1}== 7
+elseif gameBoard{3,2} == 'O' & gameBoard{3,3} == 'O'& gameBoard{3,1}== 7
     gameBoard{3,1}= 'O';
     disp(gameBoard)
     disp('Computer Wins!')
     return
-elseif gameBoard{3,1} == 'O' & gameBoard{3,3} == 'O'& gameBoard{3,2}== 8
+elseif gameBoard{1,1} == 'O' & gameBoard{3,1} == 'O' & gameBoard{2,1}== 4
+    gameBoard{2,1}= 'O';
+    disp(gameBoard)
+    disp('Computer Wins!')
+    return
+elseif gameBoard{1,1} == 'O' & gameBoard{2,1} == 'O' & gameBoard{3,1}== 7
+    gameBoard{3,1}= 'O';
+    disp(gameBoard)
+    disp('Computer Wins!')
+    return
+elseif gameBoard{2,1} == 'O' & gameBoard{3,1} == 'O' & gameBoard{1,1}== 1
+    gameBoard{1,1}= 'O';
+    disp(gameBoard)
+    disp('Computer Wins!')
+    return
+elseif gameBoard{1,2} == 'O' & gameBoard{3,2} == 'O' & gameBoard{2,2}== 5
+    gameBoard{2,2}= 'O';
+    disp(gameBoard)
+    disp('Computer Wins!')
+    return
+elseif gameBoard{1,2} == 'O' & gameBoard{2,2} == 'O' & gameBoard{3,2}== 8
     gameBoard{3,2}= 'O';
+    disp(gameBoard)
+    disp('Computer Wins!')
+    return
+elseif gameBoard{2,2} == 'O' & gameBoard{3,2} == 'O' & gameBoard{1,2}== 2
+    gameBoard{1,2}= 'O';
+    disp(gameBoard)
+    disp('Computer Wins!')
+    return
+elseif gameBoard{1,3} == 'O' & gameBoard{3,3} == 'O' & gameBoard{2,3}== 6
+    gameBoard{2,3}= 'O';
     disp(gameBoard)
     disp('Computer Wins!')
     return
@@ -709,38 +764,13 @@ elseif gameBoard{2,3} == 'O' & gameBoard{3,3} == 'O' & gameBoard{1,3}== 3
     disp(gameBoard)
     disp('Computer Wins!')
     return
-elseif gameBoard{1,3} == 'O' & gameBoard{3,3} == 'O' & gameBoard{2,3}== 6
-    gameBoard{2,3}= 'O';
+elseif gameBoard{1,1} == 'O' & gameBoard{3,3} == 'O' & gameBoard{2,2}== 5
+    gameBoard{2,2}= 'O';
     disp(gameBoard)
     disp('Computer Wins!')
     return
-elseif gameBoard{2,2} == 'O' & gameBoard{1,1} == 'O' & gameBoard{3,3}== 9
+elseif gameBoard{1,1} == 'O' & gameBoard{2,2} == 'O' & gameBoard{3,3}== 9
     gameBoard{3,3}= 'O';
-    disp(gameBoard)
-    disp('Computer Wins!')
-    return
-elseif gameBoard{2,2} == 'O' & gameBoard{1,2} == 'O' & gameBoard{3,2}== 8
-    gameBoard{3,2}= 'O';
-    disp(gameBoard)
-    disp('Computer Wins!')
-    return
-elseif gameBoard{2,2} == 'O' & gameBoard{2,1} == 'O' & gameBoard{2,3}== 6
-    gameBoard{2,3}= 'O';
-    disp(gameBoard)
-    disp('Computer Wins!')
-    return
-elseif gameBoard{2,2} == 'O' & gameBoard{3,1} == 'O' & gameBoard{1,3}== 3
-    gameBoard{1,3}= 'O';
-    disp(gameBoard)
-    disp('Computer Wins!')
-    return
-elseif gameBoard{2,2} == 'O' & gameBoard{1,3} == 'O' & gameBoard{3,1}== 7
-    gameBoard{3,1}= 'O';
-    disp(gameBoard)
-    disp('Computer Wins!')
-    return
-elseif gameBoard{2,2} == 'O' & gameBoard{3,2} == 'O' & gameBoard{1,2}== 2
-    gameBoard{1,2}= 'O';
     disp(gameBoard)
     disp('Computer Wins!')
     return
@@ -749,8 +779,18 @@ elseif gameBoard{2,2} == 'O' & gameBoard{3,3} == 'O' & gameBoard{1,1}== 1
     disp(gameBoard)
     disp('Computer Wins!')
     return
-elseif gameBoard{2,2} == 'O' & gameBoard{2,3} == 'O' & gameBoard{2,1}== 4
-    gameBoard{2,1}= 'O';
+elseif gameBoard{3,1} == 'O' & gameBoard{1,3} == 'O' & gameBoard{2,2}== 5
+    gameBoard{2,2}= 'O';
+    disp(gameBoard)
+    disp('Computer Wins!')
+    return
+elseif gameBoard{2,2} == 'O' & gameBoard{1,3} == 'O' & gameBoard{3,1}== 7
+    gameBoard{3,1}= 'O';
+    disp(gameBoard)
+    disp('Computer Wins!')
+    return
+elseif gameBoard{3,1} == 'O' & gameBoard{2,2} == 'O' & gameBoard{1,3}== 3
+    gameBoard{1,3}= 'O';
     disp(gameBoard)
     disp('Computer Wins!')
     return
