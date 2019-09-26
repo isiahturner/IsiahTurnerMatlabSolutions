@@ -137,80 +137,101 @@ usedMoves= [usedMoves,playerMove];
 %Computer's second move
 if gameBoard{1,1} == 'X' & gameBoard{1,2} == 'X' & gameBoard{1,3}== 3
     gameBoard{1,3}= 'O';
+    usedMoves= [usedMoves,3];
     disp(gameBoard)
-    usedMoves=[usedMoves,3];
+
 elseif gameBoard{1,2} == 'X' & gameBoard{1,3} == 'X' & gameBoard{1,1}== 1
     gameBoard{1,1}= 'O';
+    usedMoves= [usedMoves,1];
     disp(gameBoard)
-    usedMoves=[usedMoves,1];
 elseif gameBoard{1,1} == 'X' & gameBoard{1,3} == 'X' & gameBoard{1,2}== 2
     gameBoard{1,2}= 'O';
+    usedMoves= [usedMoves,2];
     disp(gameBoard)
-    usedMoves=[usedMoves,2];
-elseif gameBoard{1,1} == 'X' & gameBoard{2,1} == 'X' & gameBoard{3,1}== 7
-    gameBoard{3,1}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,7];
-elseif gameBoard{2,1} == 'X' & gameBoard{3,1} == 'X' & gameBoard{1,1}== 1
-    gameBoard{1,1}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,1];
-elseif gameBoard{1,1} == 'X' & gameBoard{3,1} == 'X' & gameBoard{2,1}== 4
-    gameBoard{2,1}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,4];
-elseif gameBoard{3,1} == 'X' & gameBoard{3,2} == 'X' & gameBoard{3,3}== 9
-    gameBoard{3,3}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,9];
-elseif gameBoard{3,2} == 'X' & gameBoard{3,3} == 'X' & gameBoard{3,1}== 7
-    gameBoard{3,1}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,7];
-elseif gameBoard{3,1} == 'X' & gameBoard{3,3} == 'X'& gameBoard{3,2}== 8
-    gameBoard{3,2}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,8];
-elseif gameBoard{1,3} == 'X' & gameBoard{2,3} == 'X' & gameBoard{3,3}== 9
-    gameBoard{3,3}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,9];
-elseif gameBoard{2,3} == 'X' & gameBoard{3,3} == 'X' & gameBoard{1,3}== 3
-    gameBoard{1,3}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,3];
-elseif gameBoard{1,3} == 'X' & gameBoard{3,3} == 'X' & gameBoard{2,3}== 6
+elseif gameBoard{2,1} == 'X' & gameBoard{2,2} == 'X' & gameBoard{2,3}== 6
     gameBoard{2,3}= 'O';
+    usedMoves= [usedMoves,6];
     disp(gameBoard)
-    usedMoves=[usedMoves,6];
-elseif gameBoard{2,2} == 'X' & gameBoard{1,1} == 'X' & gameBoard{3,3}== 9
-    gameBoard{3,3}= 'O';
+elseif gameBoard{2,1} == 'X' & gameBoard{2,3} == 'X' & gameBoard{2,2}== 5
+    gameBoard{2,2}= 'O';
+    usedMoves= [usedMoves,5];
     disp(gameBoard)
-    usedMoves=[usedMoves,9];
-elseif gameBoard{2,2} == 'X' & gameBoard{1,2} == 'X' & gameBoard{3,2}== 8
-    gameBoard{3,2}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,8];
-elseif gameBoard{2,2} == 'X' & gameBoard{2,1} == 'X' & gameBoard{2,3}== 6
-    gameBoard{2,3}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,6];
-elseif gameBoard{2,2} == 'X' & gameBoard{3,1} == 'X' & gameBoard{1,3}== 1
-    gameBoard{1,3}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,1];
-elseif gameBoard{2,2} == 'X' & gameBoard{3,2} == 'X' & gameBoard{1,2}== 2
-    gameBoard{1,2}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,2];
-elseif gameBoard{2,2} == 'X' & gameBoard{3,3} == 'X' & gameBoard{1,1}== 1
-    gameBoard{1,1}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,1];
 elseif gameBoard{2,2} == 'X' & gameBoard{2,3} == 'X' & gameBoard{2,1}== 4
     gameBoard{2,1}= 'O';
+    usedMoves= [usedMoves,4];
     disp(gameBoard)
-    usedMoves=[usedMoves,4];
+elseif gameBoard{3,1} == 'X' & gameBoard{3,3} == 'X' & gameBoard{3,2}== 8
+    gameBoard{3,2}= 'O';
+    usedMoves= [usedMoves,8];
+    disp(gameBoard)
+elseif gameBoard{3,1} == 'X' & gameBoard{3,2} == 'X' & gameBoard{3,3}== 9
+    gameBoard{3,3}= 'O';
+    usedMoves= [usedMoves,9];
+    disp(gameBoard)
+elseif gameBoard{3,2} == 'X' & gameBoard{3,3} == 'X'& gameBoard{3,1}== 7
+    gameBoard{3,1}= 'O';
+    usedMoves= [usedMoves,7];
+    disp(gameBoard)
+elseif gameBoard{1,1} == 'X' & gameBoard{3,1} == 'X' & gameBoard{2,1}== 4
+    gameBoard{2,1}= 'O';
+    usedMoves= [usedMoves,4];
+    disp(gameBoard)
+elseif gameBoard{1,1} == 'X' & gameBoard{2,1} == 'X' & gameBoard{3,1}== 7
+    gameBoard{3,1}= 'O';
+    usedMoves= [usedMoves,7];
+    disp(gameBoard)
+elseif gameBoard{2,1} == 'X' & gameBoard{3,1} == 'X' & gameBoard{1,1}== 1
+    gameBoard{1,1}= 'O';
+    usedMoves= [usedMoves,1];
+    disp(gameBoard)
+elseif gameBoard{1,2} == 'X' & gameBoard{3,2} == 'X' & gameBoard{2,2}== 5
+    gameBoard{2,2}= 'O';
+    usedMoves= [usedMoves,5];
+    disp(gameBoard)
+elseif gameBoard{1,2} == 'X' & gameBoard{2,2} == 'X' & gameBoard{3,2}== 8
+    gameBoard{3,2}= 'O';
+    usedMoves= [usedMoves,8];
+    disp(gameBoard)
+elseif gameBoard{2,2} == 'X' & gameBoard{3,2} == 'X' & gameBoard{1,2}== 2
+    gameBoard{1,2}= 'O';
+    usedMoves= [usedMoves,2];
+    disp(gameBoard)
+elseif gameBoard{1,3} == 'X' & gameBoard{3,3} == 'X' & gameBoard{2,3}== 6
+    gameBoard{2,3}= 'O';
+    usedMoves= [usedMoves,6];
+    disp(gameBoard)
+elseif gameBoard{1,3} == 'X' & gameBoard{2,3} == 'X' & gameBoard{3,3}== 9
+    gameBoard{3,3}= 'O';
+    usedMoves= [usedMoves,9];
+    disp(gameBoard)
+elseif gameBoard{2,3} == 'X' & gameBoard{3,3} == 'X' & gameBoard{1,3}== 3
+    gameBoard{1,3}= 'O';
+    usedMoves= [usedMoves,3];
+    disp(gameBoard)
+elseif gameBoard{1,1} == 'X' & gameBoard{3,3} == 'X' & gameBoard{2,2}== 5
+    gameBoard{2,2}= 'O';
+    usedMoves= [usedMoves,5];
+    disp(gameBoard)
+elseif gameBoard{1,1} == 'X' & gameBoard{2,2} == 'X' & gameBoard{3,3}== 9
+    gameBoard{3,3}= 'O';
+    usedMoves= [usedMoves,9];
+    disp(gameBoard)
+elseif gameBoard{2,2} == 'X' & gameBoard{3,3} == 'X' & gameBoard{1,1}== 1
+    gameBoard{1,1}= 'O';
+    usedMoves= [usedMoves,1];
+    disp(gameBoard)
+elseif gameBoard{3,1} == 'X' & gameBoard{1,3} == 'X' & gameBoard{2,2}== 5
+    gameBoard{2,2}= 'O';
+    usedMoves= [usedMoves,5];
+    disp(gameBoard)
+elseif gameBoard{2,2} == 'X' & gameBoard{1,3} == 'X' & gameBoard{3,1}== 7
+    gameBoard{3,1}= 'O';
+    usedMoves= [usedMoves,7];
+    disp(gameBoard)
+elseif gameBoard{3,1} == 'X' & gameBoard{2,2} == 'X' & gameBoard{1,3}== 3
+    gameBoard{1,3}= 'O';
+    usedMoves= [usedMoves,3];
+    disp(gameBoard)
 else
      %Computer's second move if it can't win or block opponent
     if gameBoard{1,1} == 1 & gameBoard{2,2} == 'X'
@@ -479,118 +500,158 @@ end
 
 if gameBoard{1,1} == 'X' & gameBoard{1,2} == 'X' & gameBoard{1,3}== 3
     gameBoard{1,3}= 'O';
+    usedMoves= [usedMoves,3];
     disp(gameBoard)
-    usedMoves=[usedMoves,3];
+
 elseif gameBoard{1,2} == 'X' & gameBoard{1,3} == 'X' & gameBoard{1,1}== 1
     gameBoard{1,1}= 'O';
+    usedMoves= [usedMoves,1];
     disp(gameBoard)
-    usedMoves=[usedMoves,1];
 elseif gameBoard{1,1} == 'X' & gameBoard{1,3} == 'X' & gameBoard{1,2}== 2
     gameBoard{1,2}= 'O';
+    usedMoves= [usedMoves,2];
     disp(gameBoard)
-    usedMoves=[usedMoves,2];
-elseif gameBoard{1,1} == 'X' & gameBoard{2,1} == 'X' & gameBoard{3,1}== 7
-    gameBoard{3,1}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,7];
-elseif gameBoard{2,1} == 'X' & gameBoard{3,1} == 'X' & gameBoard{1,1}== 1
-    gameBoard{1,1}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,1];
-elseif gameBoard{1,1} == 'X' & gameBoard{3,1} == 'X' & gameBoard{2,1}== 4
-    gameBoard{2,1}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,4];
-elseif gameBoard{3,1} == 'X' & gameBoard{3,2} == 'X' & gameBoard{3,3}== 9
-    gameBoard{3,3}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,9];
-elseif gameBoard{3,2} == 'X' & gameBoard{3,3} == 'X' & gameBoard{3,1}== 7
-    gameBoard{3,1}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,7];
-elseif gameBoard{3,1} == 'X' & gameBoard{3,3} == 'X'& gameBoard{3,2}== 8
-    gameBoard{3,2}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,8];
-elseif gameBoard{1,3} == 'X' & gameBoard{2,3} == 'X' & gameBoard{3,3}== 9
-    gameBoard{3,3}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,9];
-elseif gameBoard{2,3} == 'X' & gameBoard{3,3} == 'X' & gameBoard{1,3}== 3
-    gameBoard{1,3}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,3];
-elseif gameBoard{1,3} == 'X' & gameBoard{3,3} == 'X' & gameBoard{2,3}== 6
+elseif gameBoard{2,1} == 'X' & gameBoard{2,2} == 'X' & gameBoard{2,3}== 6
     gameBoard{2,3}= 'O';
+    usedMoves= [usedMoves,6];
     disp(gameBoard)
-    usedMoves=[usedMoves,6];
-elseif gameBoard{2,2} == 'X' & gameBoard{1,1} == 'X' & gameBoard{3,3}== 9
-    gameBoard{3,3}= 'O';
+elseif gameBoard{2,1} == 'X' & gameBoard{2,3} == 'X' & gameBoard{2,2}== 5
+    gameBoard{2,2}= 'O';
+    usedMoves= [usedMoves,5];
     disp(gameBoard)
-    usedMoves=[usedMoves,9];
-elseif gameBoard{2,2} == 'X' & gameBoard{1,2} == 'X' & gameBoard{3,2}== 8
-    gameBoard{3,2}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,8];
-elseif gameBoard{2,2} == 'X' & gameBoard{2,1} == 'X' & gameBoard{2,3}== 6
-    gameBoard{2,3}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,6];
-elseif gameBoard{2,2} == 'X' & gameBoard{3,1} == 'X' & gameBoard{1,3}== 1
-    gameBoard{1,3}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,1];
-elseif gameBoard{2,2} == 'X' & gameBoard{3,2} == 'X' & gameBoard{1,2}== 2
-    gameBoard{1,2}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,2];
-elseif gameBoard{2,2} == 'X' & gameBoard{3,3} == 'X' & gameBoard{1,1}== 1
-    gameBoard{1,1}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,1];
 elseif gameBoard{2,2} == 'X' & gameBoard{2,3} == 'X' & gameBoard{2,1}== 4
     gameBoard{2,1}= 'O';
+    usedMoves= [usedMoves,4];
     disp(gameBoard)
-    usedMoves=[usedMoves,4];
+elseif gameBoard{3,1} == 'X' & gameBoard{3,3} == 'X' & gameBoard{3,2}== 8
+    gameBoard{3,2}= 'O';
+    usedMoves= [usedMoves,8];
+    disp(gameBoard)
+elseif gameBoard{3,1} == 'X' & gameBoard{3,2} == 'X' & gameBoard{3,3}== 9
+    gameBoard{3,3}= 'O';
+    usedMoves= [usedMoves,9];
+    disp(gameBoard)
+elseif gameBoard{3,2} == 'X' & gameBoard{3,3} == 'X'& gameBoard{3,1}== 7
+    gameBoard{3,1}= 'O';
+    usedMoves= [usedMoves,7];
+    disp(gameBoard)
+elseif gameBoard{1,1} == 'X' & gameBoard{3,1} == 'X' & gameBoard{2,1}== 4
+    gameBoard{2,1}= 'O';
+    usedMoves= [usedMoves,4];
+    disp(gameBoard)
+elseif gameBoard{1,1} == 'X' & gameBoard{2,1} == 'X' & gameBoard{3,1}== 7
+    gameBoard{3,1}= 'O';
+    usedMoves= [usedMoves,7];
+    disp(gameBoard)
+elseif gameBoard{2,1} == 'X' & gameBoard{3,1} == 'X' & gameBoard{1,1}== 1
+    gameBoard{1,1}= 'O';
+    usedMoves= [usedMoves,1];
+    disp(gameBoard)
+elseif gameBoard{1,2} == 'X' & gameBoard{3,2} == 'X' & gameBoard{2,2}== 5
+    gameBoard{2,2}= 'O';
+    usedMoves= [usedMoves,5];
+    disp(gameBoard)
+elseif gameBoard{1,2} == 'X' & gameBoard{2,2} == 'X' & gameBoard{3,2}== 8
+    gameBoard{3,2}= 'O';
+    usedMoves= [usedMoves,8];
+    disp(gameBoard)
+elseif gameBoard{2,2} == 'X' & gameBoard{3,2} == 'X' & gameBoard{1,2}== 2
+    gameBoard{1,2}= 'O';
+    usedMoves= [usedMoves,2];
+    disp(gameBoard)
+elseif gameBoard{1,3} == 'X' & gameBoard{3,3} == 'X' & gameBoard{2,3}== 6
+    gameBoard{2,3}= 'O';
+    usedMoves= [usedMoves,6];
+    disp(gameBoard)
+elseif gameBoard{1,3} == 'X' & gameBoard{2,3} == 'X' & gameBoard{3,3}== 9
+    gameBoard{3,3}= 'O';
+    usedMoves= [usedMoves,9];
+    disp(gameBoard)
+elseif gameBoard{2,3} == 'X' & gameBoard{3,3} == 'X' & gameBoard{1,3}== 3
+    gameBoard{1,3}= 'O';
+    usedMoves= [usedMoves,3];
+    disp(gameBoard)
+elseif gameBoard{1,1} == 'X' & gameBoard{3,3} == 'X' & gameBoard{2,2}== 5
+    gameBoard{2,2}= 'O';
+    usedMoves= [usedMoves,5];
+    disp(gameBoard)
+elseif gameBoard{1,1} == 'X' & gameBoard{2,2} == 'X' & gameBoard{3,3}== 9
+    gameBoard{3,3}= 'O';
+    usedMoves= [usedMoves,9];
+    disp(gameBoard)
+elseif gameBoard{2,2} == 'X' & gameBoard{3,3} == 'X' & gameBoard{1,1}== 1
+    gameBoard{1,1}= 'O';
+    usedMoves= [usedMoves,1];
+    disp(gameBoard)
+elseif gameBoard{3,1} == 'X' & gameBoard{1,3} == 'X' & gameBoard{2,2}== 5
+    gameBoard{2,2}= 'O';
+    usedMoves= [usedMoves,5];
+    disp(gameBoard)
+elseif gameBoard{2,2} == 'X' & gameBoard{1,3} == 'X' & gameBoard{3,1}== 7
+    gameBoard{3,1}= 'O';
+    usedMoves= [usedMoves,7];
+    disp(gameBoard)
+elseif gameBoard{3,1} == 'X' & gameBoard{2,2} == 'X' & gameBoard{1,3}== 3
+    gameBoard{1,3}= 'O';
+    usedMoves= [usedMoves,3];
+    disp(gameBoard)
 else
      %Computer's second move if it can't win or block opponent
-    if gameBoard{1,1} ~= 'X' & gameBoard{1,1} ~= 'O'
+    if gameBoard{1,1} == 1 & gameBoard{2,2} == 'X'
     gameBoard{1,1}= 'O';
     disp(gameBoard)
     usedMoves=[usedMoves,1];
-    elseif gameBoard{1,3} ~= 'X' & gameBoard{1,3} ~= 'O'
+    elseif gameBoard{1,3} == 3 & gameBoard{2,2} == 'X'
     gameBoard{1,3}= 'O';
     disp(gameBoard)
     usedMoves=[usedMoves,3];
-    elseif gameBoard{3,1} ~= 'X' & gameBoard{3,1} ~= 'O'
+    elseif gameBoard{3,1} == 7 & gameBoard{2,2} == 'X'
     gameBoard{3,1}= 'O';
     disp(gameBoard)
     usedMoves=[usedMoves,7];
-    elseif gameBoard{3,3} ~= 'X' & gameBoard{3,3} ~= 'O'
+    elseif gameBoard{3,3} == 9 & gameBoard{2,2} == 'X'
     gameBoard{3,3}= 'O';
     disp(gameBoard)
     usedMoves=[usedMoves,9];
-    elseif gameBoard{2,2} ~= 'X' & gameBoard{2,2} ~= 'O'
-    gameBoard{2,2}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,5];
-    elseif gameBoard{2,3} ~= 'X' & gameBoard{2,3} ~= 'O'
-    gameBoard{2,3}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,6];
-    elseif gameBoard{1,2} ~= 'X' & gameBoard{1,2} ~= 'O'
-    gameBoard{1,2}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,2];
-    elseif gameBoard{3,2} ~= 'X' & gameBoard{3,2} ~= 'O'
-    gameBoard{3,2}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,8];
-    elseif gameBoard{2,1} ~= 'X' & gameBoard{2,1} ~= 'O'
-    gameBoard{2,1}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,4];
+    %When player didn't take middle first
+    elseif gameBoard{1,2}=='X' & gameBoard{3,1}=='X' & gameBoard{2,3}== 6
+        gameBoard{2,3}= 'O';
+        disp(gameBoard)
+        usedMoves= [usedMoves,6];
+    elseif gameBoard{1,2}=='X' & gameBoard{3,3}=='X' & gameBoard{2,1}== 4
+        gameBoard{2,1}= 'O';
+        disp(gameBoard)
+        usedMoves= [usedMoves,4];
+    elseif gameBoard{3,2}=='X' & gameBoard{1,1}=='X' & gameBoard{2,3}== 6
+        gameBoard{2,3}= 'O';
+        disp(gameBoard)
+        usedMoves= [usedMoves,6];
+    elseif gameBoard{3,2}=='X' & gameBoard{1,3}=='X' & gameBoard{2,1}== 4
+        gameBoard{2,1}= 'O';
+        disp(gameBoard)
+        usedMoves= [usedMoves,4];
+    elseif gameBoard{2,1}=='X' & gameBoard{1,2}=='X' & gameBoard{1,1}== 1
+        gameBoard{1,1}= 'O'
+        disp(gameBoard)
+        usedMoves= [usedMoves,1];
+    elseif gameBoard{2,3}=='X' & gameBoard{3,2}=='X' & gameBoard{1,3}== 3
+        gameBoard{1,3}= 'O'
+        disp(gameBoard)
+       usedMoves= [usedMoves,3];
+    elseif gameBoard{2,3}=='X' & gameBoard{1,2}=='X' & gameBoard{1,1}== 1
+        gameBoard{1,1}= 'O'
+        disp(gameBoard)
+        usedMoves= [usedMoves,1];
+    else
+        if gameBoard{3,2}== 8
+        gameBoard{3,2}= 'O';
+        disp(gameBoard)
+        usedMoves= [usedMoves,8];
+        else
+            gameBoard{1,1}= 'O';
+            disp(gameBoard)
+            usedMoves= [usedMoves,1];
+        end
     end
 end
 
@@ -796,121 +857,161 @@ elseif gameBoard{3,1} == 'O' & gameBoard{2,2} == 'O' & gameBoard{1,3}== 3
     return
 end
 
-%Computer's fourth move if it can't win
+%Computer's fourth move blocking the player
 if gameBoard{1,1} == 'X' & gameBoard{1,2} == 'X' & gameBoard{1,3}== 3
     gameBoard{1,3}= 'O';
+    usedMoves= [usedMoves,3];
     disp(gameBoard)
-    usedMoves=[usedMoves,3];
+
 elseif gameBoard{1,2} == 'X' & gameBoard{1,3} == 'X' & gameBoard{1,1}== 1
     gameBoard{1,1}= 'O';
+    usedMoves= [usedMoves,1];
     disp(gameBoard)
-    usedMoves=[usedMoves,1];
 elseif gameBoard{1,1} == 'X' & gameBoard{1,3} == 'X' & gameBoard{1,2}== 2
     gameBoard{1,2}= 'O';
+    usedMoves= [usedMoves,2];
     disp(gameBoard)
-    usedMoves=[usedMoves,2];
-elseif gameBoard{1,1} == 'X' & gameBoard{2,1} == 'X' & gameBoard{3,1}== 7
-    gameBoard{3,1}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,7];
-elseif gameBoard{2,1} == 'X' & gameBoard{3,1} == 'X' & gameBoard{1,1}== 1
-    gameBoard{1,1}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,1];
-elseif gameBoard{1,1} == 'X' & gameBoard{3,1} == 'X' & gameBoard{2,1}== 4
-    gameBoard{2,1}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,4];
-elseif gameBoard{3,1} == 'X' & gameBoard{3,2} == 'X' & gameBoard{3,3}== 9
-    gameBoard{3,3}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,9];
-elseif gameBoard{3,2} == 'X' & gameBoard{3,3} == 'X' & gameBoard{3,1}== 7
-    gameBoard{3,1}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,7];
-elseif gameBoard{3,1} == 'X' & gameBoard{3,3} == 'X'& gameBoard{3,2}== 8
-    gameBoard{3,2}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,8];
-elseif gameBoard{1,3} == 'X' & gameBoard{2,3} == 'X' & gameBoard{3,3}== 9
-    gameBoard{3,3}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,9];
-elseif gameBoard{2,3} == 'X' & gameBoard{3,3} == 'X' & gameBoard{1,3}== 3
-    gameBoard{1,3}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,3];
-elseif gameBoard{1,3} == 'X' & gameBoard{3,3} == 'X' & gameBoard{2,3}== 6
+elseif gameBoard{2,1} == 'X' & gameBoard{2,2} == 'X' & gameBoard{2,3}== 6
     gameBoard{2,3}= 'O';
+    usedMoves= [usedMoves,6];
     disp(gameBoard)
-    usedMoves=[usedMoves,6];
-elseif gameBoard{2,2} == 'X' & gameBoard{1,1} == 'X' & gameBoard{3,3}== 9
-    gameBoard{3,3}= 'O';
+elseif gameBoard{2,1} == 'X' & gameBoard{2,3} == 'X' & gameBoard{2,2}== 5
+    gameBoard{2,2}= 'O';
+    usedMoves= [usedMoves,5];
     disp(gameBoard)
-    usedMoves=[usedMoves,9];
-elseif gameBoard{2,2} == 'X' & gameBoard{1,2} == 'X' & gameBoard{3,2}== 8
-    gameBoard{3,2}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,8];
-elseif gameBoard{2,2} == 'X' & gameBoard{2,1} == 'X' & gameBoard{2,3}== 6
-    gameBoard{2,3}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,6];
-elseif gameBoard{2,2} == 'X' & gameBoard{3,1} == 'X' & gameBoard{1,3}== 1
-    gameBoard{1,3}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,1];
-elseif gameBoard{2,2} == 'X' & gameBoard{3,2} == 'X' & gameBoard{1,2}== 2
-    gameBoard{1,2}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,2];
-elseif gameBoard{2,2} == 'X' & gameBoard{3,3} == 'X' & gameBoard{1,1}== 1
-    gameBoard{1,1}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,1];
 elseif gameBoard{2,2} == 'X' & gameBoard{2,3} == 'X' & gameBoard{2,1}== 4
     gameBoard{2,1}= 'O';
+    usedMoves= [usedMoves,4];
     disp(gameBoard)
-    usedMoves=[usedMoves,4];
+elseif gameBoard{3,1} == 'X' & gameBoard{3,3} == 'X' & gameBoard{3,2}== 8
+    gameBoard{3,2}= 'O';
+    usedMoves= [usedMoves,8];
+    disp(gameBoard)
+elseif gameBoard{3,1} == 'X' & gameBoard{3,2} == 'X' & gameBoard{3,3}== 9
+    gameBoard{3,3}= 'O';
+    usedMoves= [usedMoves,9];
+    disp(gameBoard)
+elseif gameBoard{3,2} == 'X' & gameBoard{3,3} == 'X'& gameBoard{3,1}== 7
+    gameBoard{3,1}= 'O';
+    usedMoves= [usedMoves,7];
+    disp(gameBoard)
+elseif gameBoard{1,1} == 'X' & gameBoard{3,1} == 'X' & gameBoard{2,1}== 4
+    gameBoard{2,1}= 'O';
+    usedMoves= [usedMoves,4];
+    disp(gameBoard)
+elseif gameBoard{1,1} == 'X' & gameBoard{2,1} == 'X' & gameBoard{3,1}== 7
+    gameBoard{3,1}= 'O';
+    usedMoves= [usedMoves,7];
+    disp(gameBoard)
+elseif gameBoard{2,1} == 'X' & gameBoard{3,1} == 'X' & gameBoard{1,1}== 1
+    gameBoard{1,1}= 'O';
+    usedMoves= [usedMoves,1];
+    disp(gameBoard)
+elseif gameBoard{1,2} == 'X' & gameBoard{3,2} == 'X' & gameBoard{2,2}== 5
+    gameBoard{2,2}= 'O';
+    usedMoves= [usedMoves,5];
+    disp(gameBoard)
+elseif gameBoard{1,2} == 'X' & gameBoard{2,2} == 'X' & gameBoard{3,2}== 8
+    gameBoard{3,2}= 'O';
+    usedMoves= [usedMoves,8];
+    disp(gameBoard)
+elseif gameBoard{2,2} == 'X' & gameBoard{3,2} == 'X' & gameBoard{1,2}== 2
+    gameBoard{1,2}= 'O';
+    usedMoves= [usedMoves,2];
+    disp(gameBoard)
+elseif gameBoard{1,3} == 'X' & gameBoard{3,3} == 'X' & gameBoard{2,3}== 6
+    gameBoard{2,3}= 'O';
+    usedMoves= [usedMoves,6];
+    disp(gameBoard)
+elseif gameBoard{1,3} == 'X' & gameBoard{2,3} == 'X' & gameBoard{3,3}== 9
+    gameBoard{3,3}= 'O';
+    usedMoves= [usedMoves,9];
+    disp(gameBoard)
+elseif gameBoard{2,3} == 'X' & gameBoard{3,3} == 'X' & gameBoard{1,3}== 3
+    gameBoard{1,3}= 'O';
+    usedMoves= [usedMoves,3];
+    disp(gameBoard)
+elseif gameBoard{1,1} == 'X' & gameBoard{3,3} == 'X' & gameBoard{2,2}== 5
+    gameBoard{2,2}= 'O';
+    usedMoves= [usedMoves,5];
+    disp(gameBoard)
+elseif gameBoard{1,1} == 'X' & gameBoard{2,2} == 'X' & gameBoard{3,3}== 9
+    gameBoard{3,3}= 'O';
+    usedMoves= [usedMoves,9];
+    disp(gameBoard)
+elseif gameBoard{2,2} == 'X' & gameBoard{3,3} == 'X' & gameBoard{1,1}== 1
+    gameBoard{1,1}= 'O';
+    usedMoves= [usedMoves,1];
+    disp(gameBoard)
+elseif gameBoard{3,1} == 'X' & gameBoard{1,3} == 'X' & gameBoard{2,2}== 5
+    gameBoard{2,2}= 'O';
+    usedMoves= [usedMoves,5];
+    disp(gameBoard)
+elseif gameBoard{2,2} == 'X' & gameBoard{1,3} == 'X' & gameBoard{3,1}== 7
+    gameBoard{3,1}= 'O';
+    usedMoves= [usedMoves,7];
+    disp(gameBoard)
+elseif gameBoard{3,1} == 'X' & gameBoard{2,2} == 'X' & gameBoard{1,3}== 3
+    gameBoard{1,3}= 'O';
+    usedMoves= [usedMoves,3];
+    disp(gameBoard)
 else
      %Computer's second move if it can't win or block opponent
-    if gameBoard{1,1} ~= 'X' & gameBoard{1,1} ~= 'O'
+    if gameBoard{1,1} == 1 & gameBoard{2,2} == 'X'
     gameBoard{1,1}= 'O';
     disp(gameBoard)
     usedMoves=[usedMoves,1];
-    elseif gameBoard{1,3} ~= 'X' & gameBoard{1,3} ~= 'O'
+    elseif gameBoard{1,3} == 3 & gameBoard{2,2} == 'X'
     gameBoard{1,3}= 'O';
     disp(gameBoard)
     usedMoves=[usedMoves,3];
-    elseif gameBoard{3,1} ~= 'X' & gameBoard{3,1} ~= 'O'
+    elseif gameBoard{3,1} == 7 & gameBoard{2,2} == 'X'
     gameBoard{3,1}= 'O';
     disp(gameBoard)
     usedMoves=[usedMoves,7];
-    elseif gameBoard{3,3} ~= 'X' & gameBoard{3,3} ~= 'O'
+    elseif gameBoard{3,3} == 9 & gameBoard{2,2} == 'X'
     gameBoard{3,3}= 'O';
     disp(gameBoard)
     usedMoves=[usedMoves,9];
-    elseif gameBoard{2,2} ~= 'X' & gameBoard{2,2} ~= 'O'
-    gameBoard{2,2}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,5];
-    elseif gameBoard{2,3} ~= 'X' & gameBoard{2,3} ~= 'O'
-    gameBoard{2,3}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,6];
-    elseif gameBoard{1,2} ~= 'X' & gameBoard{1,2} ~= 'O'
-    gameBoard{1,2}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,2];
-    elseif gameBoard{3,2} ~= 'X' & gameBoard{3,2} ~= 'O'
-    gameBoard{3,2}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,8];
-    elseif gameBoard{2,1} ~= 'X' & gameBoard{2,1} ~= 'O'
-    gameBoard{2,1}= 'O';
-    disp(gameBoard)
-    usedMoves=[usedMoves,4];
+    %When player didn't take middle first
+    elseif gameBoard{1,2}=='X' & gameBoard{3,1}=='X' & gameBoard{2,3}== 6
+        gameBoard{2,3}= 'O';
+        disp(gameBoard)
+        usedMoves= [usedMoves,6];
+    elseif gameBoard{1,2}=='X' & gameBoard{3,3}=='X' & gameBoard{2,1}== 4
+        gameBoard{2,1}= 'O';
+        disp(gameBoard)
+        usedMoves= [usedMoves,4];
+    elseif gameBoard{3,2}=='X' & gameBoard{1,1}=='X' & gameBoard{2,3}== 6
+        gameBoard{2,3}= 'O';
+        disp(gameBoard)
+        usedMoves= [usedMoves,6];
+    elseif gameBoard{3,2}=='X' & gameBoard{1,3}=='X' & gameBoard{2,1}== 4
+        gameBoard{2,1}= 'O';
+        disp(gameBoard)
+        usedMoves= [usedMoves,4];
+    elseif gameBoard{2,1}=='X' & gameBoard{1,2}=='X' & gameBoard{1,1}== 1
+        gameBoard{1,1}= 'O'
+        disp(gameBoard)
+        usedMoves= [usedMoves,1];
+    elseif gameBoard{2,3}=='X' & gameBoard{3,2}=='X' & gameBoard{1,3}== 3
+        gameBoard{1,3}= 'O'
+        disp(gameBoard)
+       usedMoves= [usedMoves,3];
+    elseif gameBoard{2,3}=='X' & gameBoard{1,2}=='X' & gameBoard{1,1}== 1
+        gameBoard{1,1}= 'O'
+        disp(gameBoard)
+        usedMoves= [usedMoves,1];
+    else
+        if gameBoard{3,2}== 8
+        gameBoard{3,2}= 'O';
+        disp(gameBoard)
+        usedMoves= [usedMoves,8];
+        else
+            gameBoard{1,1}= 'O';
+            disp(gameBoard)
+            usedMoves= [usedMoves,1];
+        end
     end
 end
 
