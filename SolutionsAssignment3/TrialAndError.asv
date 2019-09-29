@@ -3,9 +3,7 @@
 % Date: 09/17/2019
 % Description: A tic-tac-toe board that uses cell arrays in order to form
 % the board. Through the use of if/else statements, skills previously
-% learned and the documentation I created a working tic-tac-toe game. The
-% game allows the user to decide if they want to go first or second but
-% will be impossible to defeat either way.
+% learned
 
 
 %Reset Board
