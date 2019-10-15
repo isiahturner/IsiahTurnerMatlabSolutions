@@ -319,5 +319,5 @@ while strcmpi('yes',prompt)
                     
         prompt= input('Do you want to play again?(Yes or No): ','s');
 end
-
+disp('Thank you for playing')
                       
