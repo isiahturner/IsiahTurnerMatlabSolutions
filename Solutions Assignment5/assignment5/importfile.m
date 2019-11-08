@@ -1,5 +1,6 @@
 function [SubjectID1, Age1, Gender1, Weight1, Day4, Day5, Day6] = importfile(filename, dataLines)
-%IMPORTFILE1 Import data from a text file
+%IMPORTFILE Import data from a text file and seperate the data into column
+%vectors
 %  [SUBJECTID1, AGE1, GENDER1, WEIGHT1, DAY4, DAY5, DAY6] =
 %  IMPORTFILE1(FILENAME) reads data from text file FILENAME for the
 %  default selection.  Returns the data as column vectors.

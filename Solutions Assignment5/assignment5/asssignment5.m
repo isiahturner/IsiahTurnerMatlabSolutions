@@ -48,7 +48,11 @@
     else
     end
     
-%Export your results
+%Export your results (more efficient to create a big loop that has nested
+%loops that way it doesn't need to be broken up but this was easiest for me
+%to mentally picture for now. I assume the loop would change based on how
+%many times I am changing the vector and also be based on how many times I
+%need to store the created vector.
 storeMaleIso= cell(25,1);
 for i= 1:length(maleIsoIndMeans)
     storeMaleIso{i,1} = maleIsoIndMeans(i);

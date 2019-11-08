@@ -1,5 +1,10 @@
 function [maleIsoIndMeans,femaleIsoIndMeans,maleGroupIsoMean,femaleGroupIsoMean] = genderIsoCalc(variable,A1,A2,A3)
-%UNTITLED6 Separating males and females, if a guy then place into a new
+%genderIsoCalc: the purpose of this function is to first seperate the
+%values found between men and women. After the function decides whether to
+%put the information into the male's vector or female vector it takes the
+%average and of the second, third and fourth input and places it into a
+%vector that is adding each value next to each other. It also calculates
+%the average for each group.
 maleIsoIndMeans= [];
 femaleIsoIndMeans= [];
 %vector if a girl then place into a different vector
